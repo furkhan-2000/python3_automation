@@ -1,7 +1,7 @@
 import boto3
 
 # Start a session with the specified AWS profile
-session = boto3.Session(profile_name="AWS_FURRY")
+session = boto3.Session(profile_name="terra_user")
 
 # Create an EC2 resource
 ec2 = session.resource('ec2')
@@ -30,7 +30,7 @@ try:
         MinCount=1,
         MaxCount=1,
         InstanceType='t2.micro',
-        KeyName='frankfurt_key',
+        KeyName='lalu',
         SecurityGroupIds=['sg-0fa7b4d7dbcc353b5'],
         SubnetId='071a02edd74e2ec6f',
         UserData=user_data_script
